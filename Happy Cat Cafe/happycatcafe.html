@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+<title>Happy Cate Cafe</title>
+<script src="/assets/jquery.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Matemasie&family=Reenie+Beanie&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: rgba(200, 0, 200, 0.05);
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Matemasie', cursive;
+  text-align: center;
+  font-size: 65px;
+  color: pink;
+  margin: 20px 0 0 0;
+}
+h2 {
+  font-family: 'Reenie Beanie';
+  font-size: 30px;
+  text-align: center;
+  color: rgba(180,80,70,0.4);
+  margin: 20px 0 30px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: pink;
+  background: linear-gradient(bottom, rgba(220,150,150,1), rgba(220,190,190,.4));
+  background: -webkit-linear-gradient(bottom, rgba(220,150,150,1), rgba(220,190,190,.4));
+  background: -moz-linear-gradient(bottom, rgba(220,150,150,1), rgba(220,190,190,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  border-radius: 12px;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 120px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.catlounge{
+  background-image: url("https://i.imgur.com/aN8Np33.png");
+  background-position: center;
+}
+.menu{
+  background-image: url("https://i.imgur.com/IZ5AUhN.png");
+}
+.adopt{
+  background-image: url("https://i.imgur.com/WjPEoHB.png");
+  background-position: center;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 60px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 10px 12px;
+    height: 220px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 13px;
+  }
+  .show-description p {
+  height: 180px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Happy Cat Cafe</h1>
+<h2>~a fluffy and safe place to hang out with your furry friends~</h2>
+<div class="catlounge">
+  <p>Cat Lounge Visits<span class="price">$14</span><br />
+  <small>Welcome to the sweet home of the most adorable cats on earth! Each one of them is super friendly and approachable. This is a space where you can relax, meet cats, and enjoy their fluffy company! If you would like to plan a visit, please visit our booking calendar to reserve a time slot.</small></p>
+</div>
+
+<div class="menu">
+  <p>Cat Cafe Menu<span class="price">$3 ~ $20</span><br />
+  <small>Come enjoy some delicious snacks and drinks during your stay! We not only provide hooman food but also cat-friendly treats too (just don't accidentally mix the two since they are both visually appealing).</small></p>
+</div>
+  
+<div class="adopt">
+  <p>Cat Adoptions<span class="price"></span><br />
+  <small>Happy Cat Cafe is home to over 30 cats from rescues. All of our cats are vaccinated and adoptable. If you would like to learn more, please email us or talk to us during your visit and we will be happy to walk you through the process!</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
